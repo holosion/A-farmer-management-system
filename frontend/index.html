@@ -1,0 +1,150 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewprt" content="width= device-width, inital-scale=1.0">
+    <title>Dashboard | Farm management system </title>
+    <link rel = "stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class = "app-layout">
+        <!===========SIDEBAR======>
+        <aside class="sidebar">
+            <div class="brand">🥦🥬 Farm Management System </div>
+            <nav>
+                <a href = "index.html" class="active"> Dashboard</a>
+                <a href = "farmers.html">🌵🌿Farmers</a>
+                <a href = "crops.html"> Crops</a>
+                <a href = "farms.html"> harvests</a>
+                <a href = "customers.html"> Customers</a>
+                <a href = "sales.html"> Sales</a>
+            </nav>
+
+        <aside>
+
+        <!==========main content===============>
+        <main class="main-content">
+            <div class="topbar">
+                <h1>Dashboard Overview </h1>
+                <div class = "user-chip"> Admin</div>
+
+            </div>
+
+
+            <!=========stat cards---------->
+            <section class="stat-grid">
+                    <div class="stat-card">
+                        <h3>Total Farmers</h3>
+                        <div class="value">2</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Total Farms</h3>
+                        <div class="value">2</div>
+                    </div>
+
+
+
+                    <div class="stat-card yellow">
+                        <h3>Active crops</h3>
+                        <div class="value">3</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Total Harvests (kg)</h3>
+                        <div class="value">1,370</div>
+                    </div>
+
+                    <div class="stat-card red">
+                        <h3>Pending Payments</h3>
+                        <div class="value">1</div>
+                    </div>
+
+
+            </section>
+
+            <!------recent sales panel------>
+            <seciton class="panel">
+                <div class="panel-header">
+                    <h2>Recent sales</h2>
+                    <a href="sales.html" class"btn btn-outline btn-sm">View All</a>
+                </div>
+                <table>
+                    <thread>
+                        <tr>
+                            <th> Sale Id</th>
+                            <th> Customer</th>
+                            <th> Quantity</th>
+                            <th> Total Amount</th>
+                            <th> Date</th>
+                            <th> Status</th>
+
+                        </tr>
+                    </thread>
+                    <tbody>
+                        <tr>
+                            <td>#1</td>
+                            <td>Calvin jonathan </td>
+                            <td> 200 kg </td>
+                            <td>UGX 1,900,000</td>
+                            <td>209-01-20</td>
+                            <td><span class="badge pending"> Pending</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <!------------crop status panel -->
+            <section class= "panel">
+                <div class="panel-header">
+                    <h2> Crop status overview</h2>
+                    <a href="crops.html" class="btn btn-outline btn-sm"> Manage Crops</a>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>crop</th>
+                            <th>Farm</th>
+                            <th>planting Date</th>
+                            <th>status</th>
+                        </tr>
+                    </thead>
+                </tbody>
+                <tr>
+                    <td> maize (longe 5) </td>
+                    <td>Green valley Farm</td>
+                    <td>2026-03-01</td>
+                    <td><span class ="badge harvested">Harvested</span></td>
+                </tr>
+                <tr>
+                    <td>Beans (K132) </td>
+                    <td>Green Valley Farm</td>
+                    <td>2026-03-15</td>
+                    <td><span class = "badge growing">Growing</span></td>
+                </tr>
+                <tr>
+                    <td>coffee (robusta)</td>
+                    <td>sunrise Farm</td>
+                    <td>2025-01-10</td>
+                    <td><span class="badge harvested">Harvested</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+</div>
+</body>
+</html>
+
+
+
+                            
+
+
+
+
+                    
+
+            
+
+
+
