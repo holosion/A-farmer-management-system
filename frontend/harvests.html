@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- =====================================================
+     FARM MANAGEMENT SYSTEM — harvests.html
+     Entity: Harvest (harvest_id, crop_id FK, harvest_date,
+     quantity_harvested, unit, quality_grade, notes)
+     ===================================================== -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvests | Farm Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-layout">
+    <aside class="sidebar">
+        <div class="brand">🌱 FarmMS</div>
+        <nav>
+            <a href="index.html">📊 Dashboard</a>
+            <a href="farmers.html">👨‍🌾 Farmers</a>
+            <a href="farms.html">🚜 Farms</a>
+            <a href="crops.html">🌾 Crops</a>
+            <a href="harvests.html" class="active">🧺 Harvests</a>
+            <a href="customers.html">👥 Customers</a>
+            <a href="sales.html">💰 Sales</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <div class="topbar">
+            <h1>Harvests</h1>
+            <div class="user-chip">Admin</div>
+        </div>
+
+        <!-- ---- Add Harvest Form ---- -->
+        <section class="panel">
+            <div class="panel-header">
+                <h2>Record New Harvest</h2>
+            </div>
+            <form action="#" method="POST">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="crop_id">Crop</label>
+                        <select id="crop_id" name="crop_id" required>
+                            <option value="">-- Select Crop --</option>
+                            <option value="1">Maize — Green Valley Farm</option>
+                            <option value="2">Beans — Green Valley Farm</option>
+                            <option value="3">Coffee — Sunrise Farm</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="harvest_date">Harvest Date</label>
+                        <input type="date" id="harvest_date" name="harvest_date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity_harvested">Quantity Harvested</label>
+                        <input type="number" step="0.01" id="quantity_harvested" name="quantity_harvested" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="unit">Unit</label>
+                        <select id="unit" name="unit">
+                            <option value="kg">kg</option>
+                            <option value="bags">bags</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="quality_grade">Quality Grade</label>
+                        <select id="quality_grade" name="quality_grade">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                        </select>
+                    </div>
+                    <div class="form-group full">
+                        <label for="notes">Notes</label>
+                        <textarea id="notes" name="notes" rows="2"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Save Harvest</button>
+                        <button type="reset" class="btn btn-outline">Clear</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- ---- Harvests List ---- -->
+        <section class="panel">
+            <div class="panel-header">
+                <h2>All Harvests</h2>
+            </div>
+            <div class="toolbar">
+                <input type="text" placeholder="Search by crop...">
+                <select>
+                    <option value="">All Grades</option>
+                    <option value="A">Grade A</option>
+                    <option value="B">Grade B</option>
+                    <option value="C">Grade C</option>
+                </select>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Crop</th>
+                        <th>Harvest Date</th>
+                        <th>Quantity</th>
+                        <th>Grade</th>
+                        <th>Notes</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Maize</td>
+                        <td>2026-07-05</td>
+                        <td>950.00 kg</td>
+                        <td><span class="badge harvested">A</span></td>
+                        <td>Good yield this season</td>
+                        <td class="action-icons">
+                            <a href="#" class="edit">Edit</a>
+                            <a href="#" class="delete">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Coffee</td>
+                        <td>2026-01-15</td>
+                        <td>420.00 kg</td>
+                        <td><span class="badge growing">B</span></td>
+                        <td>Below expected due to dry spell</td>
+                        <td class="action-icons">
+                            <a href="#" class="edit">Edit</a>
+                            <a href="#" class="delete">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</div>
+</body>
+</html>
